@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "52cfbf27-6e3f-4c77-a355-2f948233ae52",
+		"name": "Products",
+		"description": "Order Management API For Products :\n\n1. Create API to add products to database\n    \n2. Create an API to change status of a product.\n    \n3. API to get the faulty products along with the details of who lastupdated the status",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30758167"
+	},
+	"item": [
+		{
+			"name": "Add Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Mouse\",\r\n    \"manufacturer\":\"67cae6f0cfa301564b92603a\",\r\n    \"seller\":\"67cae7a4cfa301564b92603c\",\r\n    \"price\":\"400\",\r\n    \"userId\":\"67cae6f0cfa301564b92603a\",\r\n    \"userType\":\"manufacturer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/products/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Status",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\":\"faulty\",\r\n    \"userId\":\"67cae7a4cfa301564b92603c\",\r\n    \"userType\":\"seller\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/products/update-status/67cae8e7872056301fd4db1f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products",
+						"update-status",
+						"67cae8e7872056301fd4db1f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Faulty Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/products/faulty",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products",
+						"faulty"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

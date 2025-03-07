@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "29051be3-b7b9-488b-a42b-b8253c70f064",
+		"name": "Orders",
+		"description": "Order Management API For Orders :\n\n1. Create an API to get all the orders with the seller,manufacturer,product and customers details\n    \n2. Create an API to get most ordered products list in decending order\n    \n3. Create an API to get total orders & revenue grouped by month.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30758167"
+	},
+	"item": [
+		{
+			"name": "All Orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/orders/all-orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"orders",
+						"all-orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Most Ordered",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/orders/most-ordered",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"orders",
+						"most-ordered"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order Revenue",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/orders/order-revenue",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"orders",
+						"order-revenue"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
